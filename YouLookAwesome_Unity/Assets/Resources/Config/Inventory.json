@@ -1,0 +1,24 @@
+{
+	"weapons": [
+
+	],
+	"items":[
+	
+	],
+	"equipment":[
+		{
+			"type":"LeftShoulder"
+			"name":"Random",
+			"rarity":0,
+			"graphicId":0,
+			"buff":{}
+		},
+		{
+			"type":"LeftShoulder"
+			"name":"Excalibur",
+			"rarity":0,
+			"graphicId":0,
+			"buff":{}
+		}
+	]
+}
