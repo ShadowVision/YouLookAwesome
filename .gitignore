@@ -1,0 +1,10 @@
+# Unity .gitignore file.
+YouLookAwesome_Unity/Library
+YouLookAwesome_Unity/Library/*
+YouLookAwesome_Unity/Temp
+YouLookAwesome_Unity/Build
+*.DS_Store
+*.csproj
+*.sln
+*.userprefs
+*.pidb
