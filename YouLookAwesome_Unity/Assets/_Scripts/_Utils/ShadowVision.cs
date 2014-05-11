@@ -17,7 +17,7 @@ namespace ShadowVision{
 		}
 		public static Direction getDirectionFromVelocity(Vector2 vel, bool ignoreDiagonals = false, float minThreshold = .001f){
 			//Check if object is moving at all
-			if(Mathf.Abs(vel.x) < minThreshold|| Mathf.Abs(vel.y) < minThreshold){
+			if(Mathf.Abs(vel.x) < minThreshold && Mathf.Abs(vel.y) < minThreshold){
 				return Direction.IDLE;
 			}
 			Direction basicDirection = getBasicDirectionFromVelocity(vel, minThreshold);
@@ -26,16 +26,16 @@ namespace ShadowVision{
 			}else{
 				//check all angles
 				if(basicDirection == Direction.RIGHT){
-					if(vel.y > minThreshold){
+					if(vel.y > minThreshold/2){
 						return Direction.UP_RIGHT;
 					}else if (vel.y < -minThreshold){
 						return Direction.DOWN_RIGHT;
 					}
 				}else if(basicDirection == Direction.LEFT){
-					if(vel.y > minThreshold){
+					if(vel.y > minThreshold/2){
 						return Direction.UP_LEFT;
 					}else if (vel.y < -minThreshold){
-						return Direction.UP_RIGHT;
+						return Direction.DOWN_LEFT;
 					}
 				}
 			}
@@ -44,7 +44,7 @@ namespace ShadowVision{
 		}
 		public static Direction getBasicDirectionFromVelocity(Vector3 vel, float minThreshold = .001f){
 			//Check if object is moving at all
-			if(Mathf.Abs(vel.x) < minThreshold|| Mathf.Abs(vel.y) < minThreshold){
+			if(Mathf.Abs(vel.x) < minThreshold && Mathf.Abs(vel.y) < minThreshold){
 				return Direction.IDLE;
 			}
 			//Check UP DOWN LEFT RIGHT

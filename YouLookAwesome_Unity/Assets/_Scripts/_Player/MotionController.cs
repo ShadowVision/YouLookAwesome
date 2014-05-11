@@ -38,6 +38,7 @@ public class MotionController : HasPlayer {
 	private void updateDirection(){
 		GameHelpers.Direction newDirection = GameHelpers.getDirectionFromVelocity(_vel);
 		player.faceDirection(newDirection);
+
 	}
 
 	public void applyMotion(Vector2 newInputDirection){

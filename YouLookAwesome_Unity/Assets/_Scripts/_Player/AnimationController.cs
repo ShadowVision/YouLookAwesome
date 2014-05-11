@@ -44,5 +44,16 @@ public class AnimationController : HasPlayer {
 			break;
 		}
 		mainSprite.sprite = newSprite;
+		faceProperDirection();
+	}
+	private void faceProperDirection(){
+		//face left or right
+		Vector3 newScale = mainSprite.transform.localScale;
+		if(player.motion.vel.x >= 0){
+			newScale.x = 1;
+		}else{
+			newScale.x = -1;
+		}
+		mainSprite.transform.localScale = newScale;
 	}
 }
