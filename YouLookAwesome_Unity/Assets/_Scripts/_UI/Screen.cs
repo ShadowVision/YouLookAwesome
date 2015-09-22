@@ -13,7 +13,7 @@ public class Screen : MonoBehaviour {
 			s.enabled = true;
 		}
 		foreach(TextMesh t in textClearList){
-			t.renderer.enabled = true;
+			t.GetComponent<Renderer>().enabled = true;
 		}
 	}
 	virtual public void hide(){
@@ -21,7 +21,7 @@ public class Screen : MonoBehaviour {
 			s.enabled = false;
 		}
 		foreach(TextMesh t in textClearList){
-			t.renderer.enabled = false;
+			t.GetComponent<Renderer>().enabled = false;
 		}
 	}
 }
